@@ -1,148 +1,78 @@
 # StackUp Presentation Script
 
-This script follows the project context from the docx and matches the slide flow shown in the design screenshots. It is written for a group presentation about StackUp, a cloud-native SaaS collaboration hub for small development teams and startups.
-
-## Slide 1 - Opening / Title
+## Slide 1 - Product Concept
 Speaker: Aly
 
-"Good day everyone. Our group is presenting StackUp, a cloud-native SaaS collaboration hub built for small development teams, startups, freelance developers, and DevOps engineers.
+"Good day everyone. Ang i-introduce namin ay ang StackUp, a cloud-native team collaboration hub para sa small development teams and startups.
 
-The main idea behind StackUp is simple: instead of switching between separate tools for deployment tracking, incident response, monitoring, and communication, teams can manage everything in one place. That means less confusion, faster collaboration, and better visibility across the whole workflow.
+Makikita sa slide na ang main idea ng product ay pagsamahin ang deployment tracking, incident response, monitoring, at collaboration sa isang platform lang. So imbes na hiwa-hiwalay ang tools, nasa iisang workspace na lang siya.
 
-In this presentation, we will walk you through the problem we are solving, the target users, the product concept, the system design, how it can be implemented, and the value it can bring to teams and the industry."
+Para sa target users naman, ito ay para sa small development teams, startups, freelance developers, at DevOps engineers or developers na kailangan ng mas organized na coordination.
 
-## Slide 2 - Problem Statement / Opportunity
-Speaker: Nics
+Sa main purpose ng StackUp, gusto naming mabawasan ang tool fragmentation, mapabilis ang workflow, at mas mabilis makarespond kapag may issue o incident."
 
-"The problem StackUp addresses is tool fragmentation. A lot of small teams today rely on different platforms for deployment logs, messaging, monitoring, and incident handling. When those tools do not talk to each other, people waste time switching tabs, repeating updates, and trying to piece together what is happening.
-
-This becomes even more serious during incidents. If an issue appears in production, the team needs to see what changed, who owns the service, what alerts were triggered, and what action should happen next. Without one unified workspace, response time slows down and the team loses focus.
-
-StackUp was created to solve that gap by combining collaboration, deployment tracking, incident response, and monitoring in one cloud-native platform."
-
-## Slide 3 - Industry / Technology Context
-Speaker: Aly and Dani
-
-Aly:
-"StackUp belongs in the cloud computing and DevOps space, where teams depend on cloud-native tools to build, deploy, and manage applications faster."
+## Slide 2 - How It Leverages Emerging Technologies
+Speaker: Dani and Aly
 
 Dani:
-"The industry is moving toward microservices, containerization, CI/CD automation, and real-time monitoring. These trends make software delivery faster and more scalable, but they also make the toolchain more complex.
-
-For small teams, enterprise-level platforms are often too expensive or too complicated. That is why there is a real opportunity for a simpler, startup-friendly SaaS product that brings the essential DevOps functions together."
-
-## Slide 4 - Product Concept: Product Name, Target Users, and Main Purpose
-Speaker: Tadz and Nami
-
-Tadz:
-"The product name is StackUp. It is a cloud-native team collaboration hub designed to help development teams coordinate deployments, incidents, and monitoring in one system."
-
-Nami:
-"On the slide, the laptop mockup on the left represents the product interface, while the right side shows the target users.
-
-Our target users are small development teams, startups, freelance developers, and DevOps engineers or developers who need one platform for coordination and communication.
-
-StackUp is meant to reduce tool fragmentation, improve workflow efficiency, and help teams respond to issues faster."
-
-## Slide 5 - Product Concept: How It Leverages Emerging Technologies
-Speaker: Tadz and Nami
-
-Tadz:
-"StackUp uses AI to reduce operational noise. It can summarize incidents, detect anomalies, filter duplicate alerts, and suggest possible root causes."
-
-Nami:
-"At the same time, the platform follows a cloud-native architecture. Because it is built with microservices, containerization, and auto-scaling in mind, it can support multi-tenant operations and real-time monitoring more reliably.
-
-This means the platform is not just a dashboard. It is designed to help teams work faster while keeping the system scalable and responsive as users grow."
-
-## Slide 6 - Product Concept: Key Features and Functionalities
-Speaker: Nics, Nami, and Aly
-
-Nics:
-"The first major feature is the unified deployment dashboard. This lets teams track release status, environment status, rollback history, and affected services in one view."
-
-Nami:
-"The second feature is the incident response workspace. It supports severity tagging, owner assignment, timelines, notes, and post-incident summaries, so the team can respond in an organized way."
+"Dito natin makikita kung paano ginagamit ng StackUp ang emerging technologies, especially AI at cloud-native architecture."
 
 Aly:
-"The other important features include monitoring and observability, team collaboration tools, AI-assisted incident support, integrations with common developer tools, and role-based access with audit history.
+"Una, gamit ang AI, puwedeng mag-summarize ng incidents, mag-detect ng anomalies, mag-filter ng duplicate alerts, at mag-suggest ng possible root cause. Ibig sabihin, nababawasan ang operational noise at mas mabilis makapag-decide ang team.
 
-Together, these features make StackUp useful not just for tracking problems, but for managing the full workflow around them."
+Pangalawa, cloud-native ang architecture niya. Since microservices-based, containerized, at auto-scaling siya, mas okay siya for multi-tenant operations at real-time monitoring. So habang lumalaki ang users or workload, kaya pa rin niyang mag-scale.
 
-## Slide 7 - System / Application Design: Architecture Overview
-Speaker: Nami, Nics, and Aly
+Yung tatlong cards sa slide, pina-highlight lang nila na AI-powered ang operations, mas mabilis ang incident response, at modern cloud-native ang overall structure ng system."
 
-Nami:
-"This architecture slide shows how StackUp works at a high level. On top, users access the platform through a browser or desktop client."
-
-Nics:
-"The frontend is built with React and Tailwind CSS, which gives the user interface a responsive and modern feel. Behind that, the API Gateway handles routing and connects the frontend to the correct service."
-
-Aly:
-"The backend is powered by Node.js microservices. Each service has a specific role, such as deployment tracking, incident management, monitoring, or user and access management.
-
-The AI incident support module sits alongside the core services to summarize alerts, detect patterns, and suggest likely root causes. This keeps the platform responsive while still supporting real-time collaboration and monitoring."
-
-## Slide 8 - System / Application Design: Flowchart
-Speaker: Nami, Nics, and Aly
-
-Nics:
-"This flowchart shows the request and service flow of StackUp."
+## Slide 3 - Key Features and Functionalities
+Speaker: Nami, Nics, and Tadz
 
 Nami:
-"A user opens the app and performs an action, such as viewing a dashboard or creating an incident update. The request goes through the frontend and API Gateway, which checks authentication and routes the request to the correct microservice."
+"Ang StackUp ay nagbibigay ng unified DevOps workspace kung saan puwedeng i-manage ang deployments, incidents, monitoring, at collaboration sa one platform lang."
 
-Aly:
-"If the request involves an incident or alert, the incident or monitoring service handles it, then the AI support module can summarize the signals and suggest a likely root cause. After that, the frontend updates in real time so the team can see the latest status immediately.
+Nics:
+"Una, may unified deployment dashboard siya na nagta-track ng release status, environment status, rollback history, at affected services.
 
-This flow is important because it shows that StackUp is designed for fast response, clear ownership, and live updates."
-
-## Slide 9 - Implementation / Feasibility
-Speaker: Dani and Tadz
-
-Dani:
-"From an implementation perspective, StackUp is feasible because it uses a familiar modern stack. The frontend can be built with React and Tailwind CSS, while the backend can use Node.js services."
+Pangalawa, may incident response workspace na may severity tagging, owner assignment, timelines, notes, at post-incident summaries. Helpful ito para malinaw kung sino ang gagawa at ano ang susunod na step."
 
 Tadz:
-"For storage, PostgreSQL can handle structured records like users, incidents, and deployment histories, while Redis can support caching and real-time handling.
+"Kasama rin ang monitoring and observability view para makita ang logs, metrics, alerts, at system health.
 
-For communication and observability, StackUp can integrate Socket.io, Prometheus, Grafana, and Elasticsearch. Deployment can be containerized with Docker and Kubernetes, while GitHub Actions can support automation in the delivery pipeline."
+May RBAC plus audit logs din para secure ang access at masubaybayan ang user actions.
 
-## Slide 10 - Impact & Benefits
-Speaker: Nami, Dani, and Nics
+Bukod doon, may team collaboration tools tulad ng mentions, updates, shared notes, at action tracking. May AI-assisted incident support din para mag-summarize ng signals at mag-suggest ng likely root cause.
+
+At panghuli, may integrations siya sa repositories, CI/CD pipelines, at communication tools para connected pa rin sa existing workflow ng team."
+
+## Slide 4 - Architecture Overview
+Speaker: Nami and Aly
 
 Nami:
-"StackUp solves the problem of scattered tools by bringing deployment tracking, monitoring, and incident response into one workspace. That reduces context switching and makes work easier for small teams."
-
-Dani:
-"For startups, this means faster response times, better visibility, and less need for expensive enterprise tooling."
-
-Nics:
-"For the industry, StackUp supports the move toward integrated DevOps platforms. It helps teams work in a more structured, scalable, and collaborative way, even without a large operations staff."
-
-## Slide 11 - Future Enhancements / Next Steps
-Speaker: Aly and Tadz
+"Sa architecture overview, makikita natin ang high-level flow ng StackUp system from browser or desktop client hanggang sa backend services."
 
 Aly:
-"In future versions, StackUp can become even smarter with an advanced AI incident copilot, predictive alerting, and automated runbooks."
+"Sa frontend, React at Tailwind CSS ang ginagamit para sa user interface. Tapos may API Gateway sa gitna na naka-Node.js and Express, which handles routing ng requests.
 
-Tadz:
-"We can also expand the product with multi-environment release intelligence, deeper integrations with tools like Jira and Slack, customizable dashboards, and a post-incident knowledge graph.
+Makikita rin dito ang auth middleware with JWT verification, session tokens, at role-based permissions para secure ang access.
 
-These future enhancements would make StackUp even more valuable as a long-term operational control center for modern software teams."
+Sa service layer naman, hiwa-hiwalay ang deployment service, incident service, monitoring service, at user/auth service. May AI incident support module din na tumutulong sa alert summarization, anomaly detection, at root cause suggestions.
 
-## Slide 12 - Closing / References
-Speaker: Aly
+Ibig sabihin, modular ang design niya, so mas manageable, mas scalable, at mas okay for real-time operations."
 
-"To conclude, StackUp is our proposed cloud-native SaaS collaboration hub that helps small development teams and startups manage deployments, incidents, and monitoring in one platform.
+## Slide 5 - Architecture Overview
+Speaker: Aly and Nics
 
-Its main value is that it reduces fragmentation, improves visibility, speeds up response, and gives lean teams a more organized way to work.
+Aly:
+"Ito naman ang flowchart ng request and service flow ng StackUp."
 
-Thank you for listening. If you have any questions, we would be happy to answer them."
+Nics:
+"Nagsisimula siya kapag user nag-open ng StackUp at gumawa ng action request. Tapos dumadaan muna siya sa frontend at nagse-send ng HTTPS request papunta sa API Gateway.
 
-## Short Reminders For Delivery
+Kung valid ang JWT token, chine-check muna ang role permissions like Admin, Developer, or Viewer. Kapag may 401 error, ibig sabihin hindi valid ang access.
 
-- Speak naturally and pause briefly between each slide.
-- Point at the visuals when mentioning the laptop mockup, the feature list, the architecture boxes, and the flowchart.
-- Keep the transitions smooth, especially from the product concept slides into the system design slides.
-- If needed, shorten the script by trimming the implementation and future enhancement sections during the final rehearsal.
+Kapag valid naman, iroroute ng API Gateway ang request sa tamang service, whether deployment, incident, monitoring, or user/auth service.
+
+Kung incident or alert signal ang nakita, mapupunta ito sa AI incident support module para ma-summarize ang alerts, ma-detect ang anomaly, at ma-suggest ang root cause.
+
+After that, babalik ang response sa frontend at mag-uupdate ang dashboard in real time. Sa baba rin ng flowchart, makikita ang data at infrastructure layer na sumusuporta sa buong system."
+
