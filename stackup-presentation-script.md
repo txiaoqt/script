@@ -88,7 +88,29 @@ Lastly, the response goes back to the frontend, and the dashboard updates in rea
 
 The key takeaway from this slide is that StackUp has a secure and organized flow, from user action to backend processing and real-time UI update. Because of this, mas efficient na ma-manage ng team ang operations and mas mabilis silang makaka-respond kapag may incidents or system changes.
 
-## Slide 6 - Key Risks and Mitigation Strategies
+## Slide 6 - How StackUp Solves the Problem
+
+For this slide, makikita natin kung paano sinosolve ng StackUp ang main problem ng fragmented DevOps workflow. The slide compares the situation before StackUp and after StackUp.
+
+Before StackUp, developers can waste around 30 to 40 percent of productive time sa context-switching between tools. Ibig sabihin, instead na focused sila sa development or incident response, nauubos ang time nila sa paglipat-lipat between different platforms.
+
+Another problem before StackUp is that critical deployment information lives in isolated silos. May information na nasa deployment tool, may nasa monitoring tool, may nasa communication app, and may nasa documentation. Because of this, mahirap makita ang complete picture ng nangyayari sa system.
+
+Before StackUp, incident response also requires manual correlation across multiple platforms. Kapag may issue, kailangan pang i-check ng team ang logs, alerts, deployment updates, and team messages separately. This makes the response process slower and more stressful.
+
+Also, team knowledge can become fragmented across documentation and Slack threads. Kapag scattered ang knowledge, mahirap hanapin ang previous decisions, incident notes, or important updates, especially during urgent situations.
+
+After StackUp, the main improvement is that there is a centralized workspace. This helps eliminate context switching and tool fragmentation because the important information is available in one place.
+
+StackUp also provides real-time visibility across deployments, monitoring, and incidents in one interface. Because of this, mas mabilis makita ng team kung ano ang current status ng system and kung saan nanggagaling ang issue.
+
+Another benefit is AI-assisted insights. These insights help surface patterns and recommendations without requiring deep DevOps expertise. Ibig sabihin, kahit lean or small team ang gumagamit, may support sila in understanding alerts and possible root causes.
+
+Lastly, StackUp supports intelligent coordination by automatically connecting related events, logs, and metrics during incidents. This helps the team understand the incident faster because related information is already connected instead of being scattered across different tools.
+
+Overall, this slide shows that StackUp solves the problem by replacing scattered tools and manual coordination with a centralized, real-time, and AI-assisted workspace.
+
+## Slide 7 - Key Risks and Mitigation Strategies
 
 For this slide, I will discuss the key risks in developing and operating StackUp, as well as the mitigation strategies for each one.
 
@@ -104,7 +126,7 @@ The last group of risks includes cost, adoption, reliability, and testing challe
 
 Overall, this slide shows that StackUp is not only focused on features. It also considers the possible challenges in performance, security, reliability, cost, and long-term maintainability.
 
-## Slide 7 - Future Enhancements / Next Steps
+## Slide 8 - Future Enhancements / Next Steps
 
 For this slide, I will explain the future enhancements and next steps for StackUp. These improvements focus on intelligence, automation, broader integrations, and stronger enterprise readiness.
 
