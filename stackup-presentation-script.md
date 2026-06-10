@@ -87,3 +87,39 @@ Fifth, kapag may incident or alert signal, isesend ito ng system sa AI incident 
 Lastly, the response goes back to the frontend, and the dashboard updates in real time. The data and infrastructure layer supports the whole process behind the scenes.
 
 The key takeaway from this slide is that StackUp has a secure and organized flow, from user action to backend processing and real-time UI update. Because of this, mas efficient na ma-manage ng team ang operations and mas mabilis silang makaka-respond kapag may incidents or system changes.
+
+## Slide 6 - Key Risks and Mitigation Strategies
+
+For this slide, I will discuss the key risks in developing and operating StackUp, as well as the mitigation strategies for each one.
+
+The first risk is integration complexity across external tools. Since StackUp connects with repositories, CI/CD pipelines, communication tools, and other providers, possible na maging complicated ang integrations. To manage this, the platform should start with a stable core integration set first. Kailangan din ng strict API contracts, webhook retry policies, and adapter modules per provider para mas consistent and easier to maintain ang connection with external tools.
+
+The second risk is real-time performance under high event volume. Since StackUp handles deployment updates, alerts, monitoring events, and incident activities, maraming events ang puwedeng pumasok at the same time. To reduce performance issues, the system can use Redis pub/sub and queue buffering. It can also apply throttling and debouncing para hindi ma-overload ang system. Socket.io channels should also be optimized by service and team para mas organized ang real-time updates.
+
+The third risk is incident data consistency across microservices. Since magkakahiwalay ang services, important na aligned ang data across deployment, incident, monitoring, and user services. To handle this, StackUp can use event-driven architecture, idempotent consumers, correlation IDs, and distributed tracing. These help make sure na kahit distributed ang system, traceable pa rin ang requests and consistent pa rin ang incident state.
+
+The fourth risk is security and access control in a multi-tenant SaaS platform. Since multiple teams or tenants can use the same platform, kailangan protected ang data and access ng bawat tenant. To address this, StackUp should implement RBAC, tenant isolation, end-to-end encryption, secure secret management, and periodic security audits. These controls help protect users and make sure na only authorized users can access sensitive parts of the system.
+
+The last group of risks includes cost, adoption, reliability, and testing challenges. To manage cost, the system can use autoscaling and log retention controls. For adoption, StackUp can provide onboarding and role-based views so users can understand the platform more easily. For reliability, it should include health checks and rollback automation. And for testing, it should combine unit testing, contract testing, integration testing, and end-to-end testing para mas confident ang team na stable ang system before release.
+
+Overall, this slide shows that StackUp is not only focused on features. It also considers the possible challenges in performance, security, reliability, cost, and long-term maintainability.
+
+## Slide 7 - Future Enhancements / Next Steps
+
+For this slide, I will explain the future enhancements and next steps for StackUp. These improvements focus on intelligence, automation, broader integrations, and stronger enterprise readiness.
+
+The first future enhancement is the AI Incident Copilot. This feature can recommend runbooks and contextual recovery actions during incidents. Ibig sabihin, kapag may problem sa system, the AI can help guide the team on possible next steps based on the situation.
+
+The second enhancement is predictive alerting. This allows StackUp to detect pre-failure patterns before outages happen. For example, if there are signs like unusual system behavior or repeated warning patterns, the platform can help the team respond earlier instead of waiting for a full incident.
+
+The third enhancement is automated runbooks. This means StackUp can execute safe, rule-based response actions for common incidents. For example, for repeated or predictable issues, the system can help automate basic response steps while still keeping the process controlled.
+
+Another enhancement is expanded integrations. StackUp can add support for tools like Jira, Slack, Microsoft Teams, GitLab, PagerDuty, and similar platforms. This is important because teams already use different tools, and more integrations can make StackUp fit better into their existing workflow.
+
+StackUp can also include custom dashboards. This would allow each role to configure views based on their needs, such as KPI tracking, SLA or SLO monitoring, and incident-focused dashboards. This makes the platform more useful for different users, whether they are developers, team leads, or operations members.
+
+Another important improvement is security and compliance upgrades. This focuses on stronger auditability, policy enforcement, and trust. Since StackUp is a SaaS platform, these upgrades are important for making the system more reliable and ready for larger organizations.
+
+For Phase 2 priority, the recommended starting point is AI Copilot, Predictive Alerting, and Automated Runbooks. These three features are the most aligned with StackUp's goal of making incident response faster, smarter, and more automated.
+
+Overall, this slide shows that StackUp can continue growing beyond its core features. The next step is to make the platform more intelligent, more automated, more connected, and more ready for real-world team operations.
